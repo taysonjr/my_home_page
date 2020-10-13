@@ -1,0 +1,284 @@
+/* 共通 */
+body{
+  background-color: gray;
+  font-family: 'Sansita Swashed', cursive;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.jp_lang{
+  font-family: 'Kosugi Maru', sans-serif;
+}
+header{
+  height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div h1{
+  margin-bottom: 0;
+}
+
+.global_nav{
+  display: flex;
+  flex-direction: row-reverse;
+  color: red;
+}
+
+.global_nav li a:hover{
+  border-bottom: 2px solid #ffffff;
+  text-decoration: none;
+}
+
+.link{
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+  margin: 0 10px;
+}
+
+
+/* profileのfloat用にコメントアウト */
+main{
+  display: flex;
+  flex: 1;
+}
+
+.gallary a{
+  padding: 0 10px;
+  margin-top: 20px;
+  background-color: blue;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+}
+a:link{
+  text-decoration: none;
+}
+
+.gallary a:hover{
+  background-color: #ffffff;
+  color: black;
+}
+
+
+footer{
+  margin: 0;
+}
+.footer_nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+
+
+/* index */
+#index_image{
+  background-image: url(img/background.JPG);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.index_main{
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+#top{
+  display: none;
+}
+
+/* profile */
+#profile_header{
+  background-image: url(img/cloud.JPG);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+main .about{
+  margin-top: 10px;
+  display: block;
+}
+
+.profile{
+  display: flex;
+}
+.about h1{
+  font-size: 36px;
+  border-bottom: 1px solid #cccccc;
+}
+.about h2 p{
+  margin: 10px;
+}
+
+.about span{
+  font-weight: bold;
+}
+
+.icon_line::before{
+  content: "";
+  padding-left: 10px;
+  border-left: 7px solid #9cb4a4;
+}
+
+.images{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_prop{
+  background-color: #767671;
+}
+
+table{
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-left: 20px;
+}
+
+th{
+  width: 150px;
+  background-color: #ffffff;
+  text-align: left;
+  border: 1px solid #cccccc;
+}
+
+/* contact */
+.contact_main{
+  margin-left: 10%;
+}
+.access{
+  display: flex;
+
+}
+#iframe{
+  display: flex;
+  flex-direction: column;
+}
+iframe{
+  width: 450px;
+  height: 350px;
+  margin: 50px;
+}
+#contact{
+  background-color: white;
+}
+.contact_table th{
+  border: none;
+  height: 50px;
+}
+
+#contact .form{
+  background-color: #eaeaea;
+  padding: 10px 0 0 50px;
+  width: 800px;
+  height: 500px;
+}
+#contact .form dl dt{
+  width: 165px;
+  padding: 10px 0;
+  float: left;
+  clear: both;
+}
+#contact .form dl dd{
+  padding: 10px 0;
+}
+#contact .form .name{
+  width: 240px;
+  height: 30px;
+}
+#contact .form .email{
+  width: 300px;
+  height: 30px;
+}
+#contact .form .type{
+  width: 180px;
+  height: 30px;
+}
+#contact .form .message{
+  width: 600px;
+  height: 150px;
+}
+#contact .form .required::after{
+  content: "*";
+  color: #ff0000;
+}
+#contact .attention{
+  margin: 20px 0 0 165px;
+}
+.btn{
+  width: 100px;
+  padding: 0 10px;
+  background-color: #009cd3;
+  color: #ffffff;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 3px solid #009cd3;
+  margin-left: 165px;
+}
+.btn:hover{
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+}
+
+.gallary1{
+  width: 230px;
+  padding-left: 8px;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+
+  body{
+    width: 100%;
+    font-size: 3.5vw;
+  }
+  h1{
+    font-size: 7.2vw;
+  }
+  h2{
+    font-size: 6vw;
+  }
+
+  .global_nav{
+    margin-top: 30px;
+  }
+  .link{
+    display: block;
+  }
+  .profile{
+    display: block;
+  }
+  .about, .profile_pic{
+    width: 100%;
+  }
+  #profile_header{
+    background-image: url(img/cloud-resp.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: 100%;
+    padding-bottom: 0;
+  }
+}
